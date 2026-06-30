@@ -72,48 +72,48 @@
         </blockquote>
       </section>
 
-    <section class="focus">
-  <h2>Our Focus</h2>
-  <div class="small-line"></div>
-  <p class="section-intro">
-    We believe education can reduce fear, improve confidence, and help people
-    take meaningful steps toward better digestive wellness.
-  </p>
+      <section class="focus">
+        <h2>Our Focus</h2>
+        <div class="small-line"></div>
+        <p class="section-intro">
+          We believe education can reduce fear, improve confidence, and help people
+          take meaningful steps toward better digestive wellness.
+        </p>
 
-  <div class="cards">
-    <article>
-      <div class="circle">
-        <img src="/digestive-disorders.png" alt="Digestive Disorders" />
-      </div>
-      <h3>Digestive Disorders</h3>
-      <p>Educational resources on IBD, Crohn's disease, ulcerative colitis, IBS, GERD, and celiac disease.</p>
-    </article>
+        <div class="cards">
+          <article>
+            <div class="circle lavender">
+              <img src="/digestive-disorders.png" alt="Digestive Disorders" />
+            </div>
+            <h3>Digestive Disorders</h3>
+            <p>Educational resources on IBD, Crohn's disease, ulcerative colitis, IBS, GERD, and celiac disease.</p>
+          </article>
 
-    <article>
-      <div class="circle">
-        <img src="/nutrition-lifestyle.png" alt="Nutrition & Lifestyle" />
-      </div>
-      <h3>Nutrition & Lifestyle</h3>
-      <p>Practical guidance for gut-friendly food choices, wellness habits, and daily digestive support.</p>
-    </article>
+          <article>
+            <div class="circle teal">
+              <img src="/nutrition-lifestyle.png" alt="Nutrition & Lifestyle" />
+            </div>
+            <h3>Nutrition & Lifestyle</h3>
+            <p>Practical guidance for gut-friendly food choices, wellness habits, and daily digestive support.</p>
+          </article>
 
-    <article>
-      <div class="circle">
-        <img src="/patient-education.png" alt="Patient Education" />
-      </div>
-      <h3>Patient Education</h3>
-      <p>Clear articles, guides, and resources designed to make digestive health easier to understand.</p>
-    </article>
+          <article>
+            <div class="circle lavender">
+              <img src="/patient-education.png" alt="Patient Education" />
+            </div>
+            <h3>Patient Education</h3>
+            <p>Clear articles, guides, and resources designed to make digestive health easier to understand.</p>
+          </article>
 
-    <article>
-      <div class="circle">
-        <img src="/community-support.png" alt="Community Support" />
-      </div>
-      <h3>Community Support</h3>
-      <p>Helping patients, caregivers, and families feel connected, informed, and supported.</p>
-    </article>
-  </div>
-</section>
+          <article>
+            <div class="circle teal">
+              <img src="/community-support.png" alt="Community Support" />
+            </div>
+            <h3>Community Support</h3>
+            <p>Helping patients, caregivers, and families feel connected, informed, and supported.</p>
+          </article>
+        </div>
+      </section>
 
       <section class="cta">
         <img class="decor cta-leaf" src="/leaf-pattern.png" alt="" />
@@ -181,7 +181,9 @@
     --white: #ffffff;
   }
 
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
   body {
     margin: 0;
@@ -190,9 +192,13 @@
     background: white;
   }
 
-  a { text-decoration: none; }
+  a {
+    text-decoration: none;
+  }
 
-  h1, h2 {
+  h1,
+  h2,
+  h3 {
     font-family: "Cormorant Garamond", Georgia, serif;
   }
 
@@ -221,7 +227,9 @@
     font-weight: 700;
   }
 
-  nav a { color: var(--navy); }
+  nav a {
+    color: var(--navy);
+  }
 
   nav .active {
     color: var(--purple);
@@ -276,7 +284,8 @@
     color: var(--navy);
   }
 
-  .line, .small-line {
+  .line,
+  .small-line {
     width: 78px;
     height: 4px;
     border-radius: 99px;
@@ -289,7 +298,9 @@
     line-height: 1.65;
   }
 
-  .buttons { margin-top: 32px; }
+  .buttons {
+    margin-top: 32px;
+  }
 
   .buttons a {
     display: inline-block;
@@ -375,7 +386,8 @@
     opacity: .14;
   }
 
-  .mission h2, .focus h2 {
+  .mission h2,
+  .focus h2 {
     font-size: 42px;
     margin: 0 0 14px;
     color: var(--navy);
@@ -424,37 +436,57 @@
   article {
     background: white;
     border-radius: 28px;
-    padding: 42px 28px;
-    box-shadow: 0 20px 48px rgba(8,41,79,.08);
-    border: 1px solid #eef1f7;
-    transition: transform .3s ease, box-shadow .3s ease;
+    padding: 40px 28px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    border: 1px solid #edf1f7;
+    transition: .3s;
   }
 
   article:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 26px 60px rgba(8,41,79,.12);
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,.12);
   }
 
   .circle {
-    width: 82px;
-    height: 82px;
-    margin: 0 auto 22px;
+    width: 126px;
+    height: 126px;
+    margin: 0 auto 24px;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--purple);
-    background: linear-gradient(135deg, var(--light-purple), var(--light-teal));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  }
+
+  .circle.lavender {
+    background: linear-gradient(135deg, #faf7ff, #f0e8ff);
+  }
+
+  .circle.teal {
+    background: linear-gradient(135deg, #effdff, #ddf7fa);
+  }
+
+  .circle img {
+    width: 92px !important;
+    height: 92px !important;
+    object-fit: contain;
+    display: block;
+    border-radius: 50%;
   }
 
   article h3 {
-    font-size: 21px;
+    font-size: 28px;
     color: var(--navy);
-    margin-bottom: 14px;
+    margin: 18px 0 14px;
   }
 
-  article p { line-height: 1.65; }
+  article p {
+    color: #4f6072;
+    line-height: 1.75;
+    font-size: 16px;
+  }
 
   .cta {
     position: relative;
@@ -527,7 +559,9 @@
     gap: 40px;
   }
 
-  .footer-logo { width: 185px; }
+  .footer-logo {
+    width: 185px;
+  }
 
   footer h4 {
     margin: 0 0 16px;
@@ -600,19 +634,25 @@
       text-align: center;
     }
 
-    .line { margin: auto; }
+    .line {
+      margin: auto;
+    }
 
     .hero-image {
       border-bottom-left-radius: 0;
       height: 380px;
     }
 
-    .mission, .cards, footer {
+    .mission,
+    .cards,
+    footer {
       grid-template-columns: 1fr;
       text-align: center;
     }
 
-    .mission-mark { margin: auto; }
+    .mission-mark {
+      margin: auto;
+    }
 
     blockquote {
       border-left: none;
@@ -632,3 +672,4 @@
     }
   }
 </style>
+
