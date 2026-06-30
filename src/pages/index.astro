@@ -5,13 +5,16 @@
   <head>
     <title>Digestive Harmony | Advancing Hope for IBD</title>
     <meta name="description" content="Digestive Harmony supports individuals and families affected by IBD through education, awareness, support, and research." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   </head>
 
   <body>
     <header class="site-header">
-      <div class="logo-wrap">
+      <a class="logo-wrap" href="/">
         <img src="/logo.png" alt="Digestive Harmony logo" />
-      </div>
+      </a>
 
       <nav>
         <a class="active" href="/">Home</a>
@@ -25,13 +28,16 @@
 
     <main>
       <section class="hero">
+        <div class="butterfly b1"></div>
+        <div class="butterfly b2"></div>
+
         <div class="hero-copy">
           <p class="eyebrow">Awareness | Support | Research</p>
           <h1>Advancing Hope for IBD</h1>
           <div class="line"></div>
           <p>
-            Helping patients and families navigate digestive conditions through
-            trusted education, community, and compassion.
+            Helping patients and families navigate digestive conditions through trusted
+            education, community, and compassion.
           </p>
 
           <div class="buttons">
@@ -46,9 +52,7 @@
       </section>
 
       <section class="mission">
-        <div class="mission-icon">
-          <span>DH</span>
-        </div>
+        <div class="mission-mark">DH</div>
 
         <div>
           <h2>Our Mission</h2>
@@ -68,8 +72,8 @@
         <h2>Our Focus</h2>
         <div class="small-line"></div>
         <p class="section-intro">
-          We believe education can reduce fear, improve confidence, and help
-          people take meaningful steps toward better digestive wellness.
+          We believe education can reduce fear, improve confidence, and help people
+          take meaningful steps toward better digestive wellness.
         </p>
 
         <div class="cards">
@@ -100,6 +104,7 @@
       </section>
 
       <section class="cta">
+        <div class="cta-art"></div>
         <div>
           <h2>Building a healthier, more informed community.</h2>
           <p>
@@ -114,6 +119,7 @@
     <footer>
       <div>
         <img src="/logo.png" alt="Digestive Harmony logo" />
+        <p>A world where everyone affected by IBD can live well and thrive.</p>
       </div>
 
       <div>
@@ -135,6 +141,7 @@
       <div>
         <h4>Stay Connected</h4>
         <p>Subscribe for updates, resources, and ways to get involved.</p>
+        <div class="email-box">Your email address <span>Submit</span></div>
       </div>
     </footer>
 
@@ -162,7 +169,7 @@
 
   body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: var(--text);
     background: white;
   }
@@ -171,21 +178,26 @@
     text-decoration: none;
   }
 
+  h1,
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
   .site-header {
-    height: 138px;
-    padding: 18px 6%;
+    min-height: 112px;
+    padding: 14px 5.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
-    box-shadow: 0 8px 24px rgba(8, 41, 79, 0.06);
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 8px 28px rgba(8, 41, 79, 0.06);
     position: sticky;
     top: 0;
     z-index: 10;
   }
 
   .logo-wrap img {
-    width: 225px;
+    width: 220px;
     display: block;
   }
 
@@ -214,37 +226,53 @@
   }
 
   .hero {
+    position: relative;
     display: grid;
     grid-template-columns: 0.92fr 1.08fr;
     align-items: center;
-    min-height: 580px;
+    min-height: 590px;
+    overflow: hidden;
     background:
-      radial-gradient(circle at 12% 85%, rgba(110, 66, 193, 0.18), transparent 26%),
-      linear-gradient(135deg, #ffffff 0%, #fbf7ff 44%, #ecfbfc 100%);
+      radial-gradient(circle at 10% 78%, rgba(110, 66, 193, 0.16), transparent 28%),
+      radial-gradient(circle at 92% 18%, rgba(6, 152, 168, 0.15), transparent 32%),
+      linear-gradient(135deg, #ffffff 0%, #fbf7ff 45%, #ecfbfc 100%);
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: -8%;
+    bottom: -90px;
+    width: 58%;
+    height: 170px;
+    background: rgba(110, 66, 193, 0.12);
+    border-radius: 50%;
+    transform: rotate(5deg);
   }
 
   .hero-copy {
-    padding: 70px 6% 70px 12%;
+    padding: 74px 6% 74px 11%;
+    z-index: 2;
   }
 
   .eyebrow {
     color: var(--purple);
     font-size: 15px;
     font-weight: 900;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
   }
 
   h1 {
-    font-size: clamp(50px, 6vw, 82px);
-    line-height: 1.03;
+    font-size: clamp(58px, 6.5vw, 88px);
+    line-height: 0.98;
     margin: 20px 0 16px;
     color: var(--navy);
   }
 
   .line,
   .small-line {
-    width: 72px;
+    width: 76px;
     height: 4px;
     border-radius: 99px;
     background: linear-gradient(90deg, var(--purple), var(--teal));
@@ -254,7 +282,6 @@
     max-width: 570px;
     font-size: 21px;
     line-height: 1.65;
-    color: var(--text);
   }
 
   .buttons {
@@ -269,18 +296,22 @@
     font-weight: 800;
     background: linear-gradient(135deg, var(--purple), var(--teal));
     margin-right: 14px;
+    box-shadow: 0 14px 30px rgba(6, 152, 168, .18);
   }
 
   .buttons .outline {
     color: var(--teal);
     background: white;
     border: 2px solid var(--teal);
+    box-shadow: none;
   }
 
   .hero-image {
     height: 100%;
     overflow: hidden;
-    border-bottom-left-radius: 95px;
+    border-bottom-left-radius: 110px;
+    box-shadow: -20px 20px 70px rgba(8,41,79,.08);
+    z-index: 1;
   }
 
   .hero-image img {
@@ -290,34 +321,68 @@
     object-position: center;
   }
 
+  .butterfly {
+    position: absolute;
+    width: 64px;
+    height: 46px;
+    opacity: .18;
+    z-index: 3;
+  }
+
+  .butterfly::before,
+  .butterfly::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 44px;
+    border: 3px solid var(--purple);
+    border-radius: 60% 40% 60% 40%;
+    background: rgba(255,255,255,.35);
+  }
+
+  .butterfly::after {
+    left: 30px;
+    border-color: var(--teal);
+    transform: scaleX(-1);
+  }
+
+  .b1 {
+    right: 7%;
+    top: 80px;
+    transform: rotate(15deg);
+  }
+
+  .b2 {
+    right: 15%;
+    bottom: 80px;
+    transform: rotate(-12deg) scale(.75);
+  }
+
   .mission {
     display: grid;
     grid-template-columns: 130px 1.35fr 1fr;
     align-items: center;
     gap: 36px;
-    padding: 46px 8%;
+    padding: 48px 8%;
     background: linear-gradient(135deg, #fbf8ff, #effdff);
   }
 
-  .mission-icon {
+  .mission-mark {
     width: 105px;
     height: 105px;
     border-radius: 50%;
     display: grid;
     place-items: center;
     background: white;
-    box-shadow: 0 16px 40px rgba(110, 66, 193, 0.14);
-  }
-
-  .mission-icon span {
+    color: var(--teal);
     font-weight: 900;
     font-size: 28px;
-    color: var(--teal);
+    box-shadow: 0 16px 40px rgba(110, 66, 193, 0.14);
   }
 
   .mission h2,
   .focus h2 {
-    font-size: 36px;
+    font-size: 40px;
     margin: 0 0 14px;
     color: var(--navy);
   }
@@ -336,11 +401,13 @@
     font-size: 24px;
     font-style: italic;
     line-height: 1.6;
+    font-family: Georgia, serif;
   }
 
   .focus {
     text-align: center;
-    padding: 58px 6% 72px;
+    padding: 62px 6% 78px;
+    background: white;
   }
 
   .focus .small-line {
@@ -350,7 +417,6 @@
   .section-intro {
     max-width: 720px;
     margin: 0 auto 42px;
-    color: var(--text);
     line-height: 1.7;
     font-size: 17px;
   }
@@ -363,20 +429,26 @@
 
   article {
     background: white;
-    border-radius: 24px;
-    padding: 38px 28px;
-    box-shadow: 0 18px 44px rgba(8, 41, 79, 0.08);
+    border-radius: 26px;
+    padding: 40px 28px;
+    box-shadow: 0 20px 48px rgba(8, 41, 79, 0.08);
     border: 1px solid #eef1f7;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+
+  article:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 26px 60px rgba(8, 41, 79, 0.12);
   }
 
   .circle {
-    width: 76px;
-    height: 76px;
+    width: 82px;
+    height: 82px;
     margin: 0 auto 22px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 900;
     color: var(--purple);
     background: linear-gradient(135deg, var(--light-purple), var(--light-teal));
@@ -390,25 +462,40 @@
 
   article p {
     line-height: 1.65;
-    color: var(--text);
   }
 
   .cta {
-    margin: 12px 6% 76px;
-    padding: 54px;
-    border-radius: 30px;
+    position: relative;
+    margin: 14px 6% 76px;
+    padding: 60px;
+    border-radius: 32px;
     color: white;
-    background: linear-gradient(135deg, var(--purple), var(--teal));
+    background:
+      radial-gradient(circle at 85% 35%, rgba(255,255,255,.13), transparent 28%),
+      linear-gradient(135deg, var(--purple), var(--teal));
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 36px;
-    box-shadow: 0 20px 46px rgba(8, 41, 79, 0.14);
+    box-shadow: 0 24px 54px rgba(8, 41, 79, 0.16);
+    overflow: hidden;
+  }
+
+  .cta-art {
+    position: absolute;
+    right: 34px;
+    bottom: -35px;
+    width: 160px;
+    height: 160px;
+    border: 2px solid rgba(255,255,255,.18);
+    border-radius: 50%;
   }
 
   .cta h2 {
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.05;
     margin: 0 0 14px;
+    font-family: "Cormorant Garamond", Georgia, serif;
   }
 
   .cta p {
@@ -420,15 +507,16 @@
   .cta a {
     background: white;
     color: var(--purple);
-    padding: 16px 34px;
+    padding: 17px 36px;
     border-radius: 999px;
     font-weight: 900;
     white-space: nowrap;
+    z-index: 2;
   }
 
   footer {
     background: #f8f5ff;
-    padding: 44px 6%;
+    padding: 48px 6%;
     display: grid;
     grid-template-columns: 1.25fr 1fr 1fr 1.15fr;
     gap: 40px;
@@ -454,6 +542,25 @@
     line-height: 1.6;
   }
 
+  .email-box {
+    margin-top: 14px;
+    background: white;
+    border-radius: 999px;
+    padding: 12px 14px 12px 18px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 12px 30px rgba(8,41,79,.08);
+  }
+
+  .email-box span {
+    color: white;
+    background: var(--purple);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-weight: 800;
+  }
+
   .copyright {
     padding: 20px 6%;
     color: var(--navy);
@@ -463,7 +570,7 @@
 
   @media (max-width: 900px) {
     .site-header {
-      height: auto;
+      min-height: auto;
       flex-direction: column;
       gap: 18px;
     }
@@ -489,7 +596,7 @@
 
     .hero-image {
       border-bottom-left-radius: 0;
-      height: 360px;
+      height: 380px;
     }
 
     .mission,
@@ -499,7 +606,7 @@
       text-align: center;
     }
 
-    .mission-icon {
+    .mission-mark {
       margin: auto;
     }
 
@@ -511,7 +618,7 @@
     .cta {
       flex-direction: column;
       text-align: center;
-      padding: 40px 24px;
+      padding: 42px 26px;
     }
   }
 </style>
