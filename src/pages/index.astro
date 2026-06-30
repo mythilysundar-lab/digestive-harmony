@@ -1,50 +1,141 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <title>Digestive Harmony</title>
+    <meta name="description" content="Digestive Harmony is a nonprofit dedicated to digestive health education, awareness, and community support." />
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Digestive Health • Education • Community</p>
+        <h1>Digestive Harmony</h1>
+        <h2>Empowering better digestive health through education, awareness, and compassion.</h2>
+        <p>
+          Digestive Harmony is a nonprofit organization dedicated to helping individuals and families understand digestive conditions, find reliable resources, and feel supported on their health journey.
+        </p>
+        <div class="buttons">
+          <a href="/about">Learn More</a>
+          <a href="/blog" class="secondary">Explore Resources</a>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div>
+          <h3>Our Mission</h3>
+          <p>To improve lives by providing trustworthy digestive health education and awareness.</p>
+        </div>
+        <div>
+          <h3>Digestive Disorders</h3>
+          <p>Learn about IBS, IBD, GERD, Crohn’s disease, ulcerative colitis, celiac disease, and more.</p>
+        </div>
+        <div>
+          <h3>Nutrition & Lifestyle</h3>
+          <p>Practical guidance on gut-friendly food choices, wellness habits, and daily support.</p>
+        </div>
+        <div>
+          <h3>Community Support</h3>
+          <p>Helping patients, caregivers, and families feel informed, connected, and less alone.</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #173b3f;
+    background: #f4fbf9;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  .hero {
+    padding: 90px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #e6f7f2, #ffffff);
+  }
+
+  .eyebrow {
+    color: #2c8c7c;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin: 16px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    max-width: 850px;
+    margin: 0 auto 24px;
+  }
+
+  .hero p {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .buttons a {
+    display: inline-block;
+    margin: 8px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: #20796d;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .buttons .secondary {
+    background: white;
+    color: #20796d;
+    border: 1px solid #20796d;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .cards div {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+
+  .cards h3 {
+    color: #20796d;
+  }
+
+  .cards p {
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 42px;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      padding: 32px 20px;
+    }
+  }
+</style>
