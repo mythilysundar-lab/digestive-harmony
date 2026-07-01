@@ -1,1 +1,284 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
 
+<Layout
+  title="Resources | Digestive Harmony"
+  description="Explore Digestive Harmony resources for IBD education, nutrition, patient support, and digestive health awareness."
+  active="resources"
+>
+  <main>
+    <section class="resources-hero">
+      <img class="decor hero-leaf" src="/leaf-pattern.png" alt="" />
+      <img class="decor hero-butterfly" src="/butterfly-icon.png" alt="" />
+
+      <p class="eyebrow">Resources</p>
+      <h1>Trusted guidance for your digestive health journey.</h1>
+      <p>
+        Explore educational resources designed to help patients, caregivers, and families
+        better understand IBD, nutrition, daily living, and support options.
+      </p>
+    </section>
+
+    <section class="resource-grid">
+      <article>
+        <h2>IBD Basics</h2>
+        <p>Understand Crohn's disease, ulcerative colitis, symptoms, diagnosis, and common treatment approaches.</p>
+        <a href="#">Coming Soon</a>
+      </article>
+
+      <article>
+        <h2>Nutrition & Lifestyle</h2>
+        <p>Learn practical tips for gut-friendly meals, hydration, routines, stress management, and wellness habits.</p>
+        <a href="#">Coming Soon</a>
+      </article>
+
+      <article>
+        <h2>Patient Education</h2>
+        <p>Clear guides to help you prepare for doctor visits, understand medications, and ask better questions.</p>
+        <a href="#">Coming Soon</a>
+      </article>
+
+      <article>
+        <h2>Caregiver Support</h2>
+        <p>Helpful information for parents, spouses, friends, and caregivers supporting someone with IBD.</p>
+        <a href="#">Coming Soon</a>
+      </article>
+
+      <article>
+        <h2>Mental Health & IBD</h2>
+        <p>Resources for coping with uncertainty, fatigue, stress, anxiety, and the emotional side of chronic illness.</p>
+        <a href="#">Coming Soon</a>
+      </article>
+
+      <article>
+        <h2>Community & Advocacy</h2>
+        <p>Learn how awareness, education, and community support can help improve the lives of people with IBD.</p>
+        <a href="#">Coming Soon</a>
+      </article>
+    </section>
+
+    <section class="featured">
+      <div>
+        <p class="cta-label">Start Here</p>
+        <h2>Newly diagnosed or supporting someone with IBD?</h2>
+        <p>
+          Begin with the basics. We are building simple, compassionate guides to help you
+          understand what IBD means, what questions to ask, and how to find support.
+        </p>
+      </div>
+
+      <a href="/contact">Ask a Question</a>
+    </section>
+
+    <section class="library">
+      <h2>Future Resource Library</h2>
+      <div class="small-line"></div>
+      <p>
+        This section will grow into a library of downloadable guides, articles, checklists,
+        videos, and community resources.
+      </p>
+
+      <div class="library-list">
+        <div>Newly Diagnosed Guide</div>
+        <div>Questions to Ask Your GI Doctor</div>
+        <div>IBD Nutrition Basics</div>
+        <div>Understanding Biologics</div>
+        <div>Mental Health & Chronic Illness</div>
+        <div>Caregiver Support Checklist</div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .resources-hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 105px 8% 115px;
+    background:
+      radial-gradient(circle at 12% 78%, rgba(110,66,193,.14), transparent 30%),
+      radial-gradient(circle at 88% 20%, rgba(6,152,168,.12), transparent 32%),
+      linear-gradient(135deg, #ffffff, #fbf7ff 45%, #ecfbfc);
+  }
+
+  .resources-hero h1 {
+    font-size: clamp(56px, 7vw, 88px);
+    line-height: .98;
+    color: var(--navy);
+    margin: 14px 0 20px;
+  }
+
+  .resources-hero p:last-child {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .hero-leaf {
+    width: 360px;
+    left: -90px;
+    bottom: -70px;
+    opacity: .08;
+  }
+
+  .hero-butterfly {
+    width: 88px;
+    right: 8%;
+    top: 80px;
+    opacity: .18;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 80px 6%;
+  }
+
+  .resource-grid article {
+    background: white;
+    border-radius: 28px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    border: 1px solid #edf1f7;
+    transition: .3s;
+  }
+
+  .resource-grid article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,.12);
+  }
+
+  .resource-grid h2 {
+    font-size: 34px;
+    color: var(--navy);
+    margin: 0 0 14px;
+  }
+
+  .resource-grid p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .resource-grid a {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--teal);
+    font-weight: 900;
+  }
+
+  .featured {
+    margin: 20px 6% 74px;
+    padding: 64px;
+    border-radius: 34px;
+    color: white;
+    background:
+      radial-gradient(circle at 86% 35%, rgba(255,255,255,.14), transparent 28%),
+      linear-gradient(135deg, var(--purple), var(--teal));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    box-shadow: 0 24px 54px rgba(8,41,79,.16);
+  }
+
+  .cta-label {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 13px;
+    font-weight: 900;
+    opacity: .9;
+  }
+
+  .featured h2 {
+    max-width: 760px;
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+
+  .featured p {
+    max-width: 760px;
+    line-height: 1.7;
+  }
+
+  .featured a {
+    background: white;
+    color: var(--purple);
+    padding: 17px 36px;
+    border-radius: 999px;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .library {
+    text-align: center;
+    padding: 20px 6% 90px;
+  }
+
+  .library h2 {
+    font-size: 46px;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  .small-line {
+    width: 76px;
+    height: 4px;
+    margin: 14px auto 24px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--purple), var(--teal));
+  }
+
+  .library > p {
+    max-width: 760px;
+    margin: 0 auto 38px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .library-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1050px;
+    margin: auto;
+  }
+
+  .library-list div {
+    background: linear-gradient(135deg, #fbf8ff, #effdff);
+    border-radius: 18px;
+    padding: 22px;
+    font-weight: 800;
+    color: var(--navy);
+  }
+
+  @media (max-width: 900px) {
+    .resource-grid,
+    .library-list {
+      grid-template-columns: 1fr;
+    }
+
+    .featured {
+      flex-direction: column;
+      text-align: center;
+      padding: 44px 26px;
+    }
+
+    .hero-leaf,
+    .hero-butterfly {
+      display: none;
+    }
+  }
+</style>
