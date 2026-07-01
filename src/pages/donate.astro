@@ -1,1 +1,234 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
 
+<Layout
+  title="Donate | Digestive Harmony"
+  description="Support Digestive Harmony and help advance hope, education, awareness, and community for people affected by IBD."
+>
+  <main>
+    <section class="donate-hero">
+      <img class="decor hero-leaf" src="/leaf-pattern.png" alt="" />
+      <img class="decor hero-butterfly" src="/butterfly-icon.png" alt="" />
+
+      <p class="eyebrow">Donate</p>
+      <h1>Your support helps bring hope to families affected by IBD.</h1>
+      <p>
+        Every gift helps Digestive Harmony create trusted resources, raise awareness,
+        and support individuals and families navigating Crohn’s disease, ulcerative colitis,
+        and digestive health challenges.
+      </p>
+    </section>
+
+    <section class="impact">
+      <h2>Your Gift Supports</h2>
+      <div class="small-line"></div>
+
+      <div class="cards">
+        <article>
+          <h3>Education</h3>
+          <p>Clear, compassionate resources that help patients and families understand IBD.</p>
+        </article>
+
+        <article>
+          <h3>Awareness</h3>
+          <p>Community outreach that helps reduce stigma and increase understanding.</p>
+        </article>
+
+        <article>
+          <h3>Support</h3>
+          <p>Programs and resources that remind patients and caregivers they are not alone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="donation-box">
+      <div>
+        <p class="cta-label">Make a Difference</p>
+        <h2>Donate to Digestive Harmony</h2>
+        <p>
+          Online donations will be available soon. Until then, please contact us if you
+          would like to support Digestive Harmony or discuss giving opportunities.
+        </p>
+      </div>
+
+      <a href="mailto:info@digestiveharmony.org">Contact Us to Donate</a>
+    </section>
+
+    <section class="note">
+      <h2>Thank you for believing in this mission.</h2>
+      <p>
+        Your generosity helps us build a community rooted in education, compassion,
+        awareness, and hope.
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .donate-hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 105px 8% 115px;
+    background:
+      radial-gradient(circle at 12% 78%, rgba(110,66,193,.14), transparent 30%),
+      radial-gradient(circle at 88% 20%, rgba(6,152,168,.12), transparent 32%),
+      linear-gradient(135deg, #ffffff, #fbf7ff 45%, #ecfbfc);
+  }
+
+  .donate-hero h1 {
+    font-size: clamp(56px, 7vw, 88px);
+    line-height: .98;
+    color: var(--navy);
+    margin: 14px 0 20px;
+  }
+
+  .donate-hero p:last-child {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .hero-leaf {
+    width: 360px;
+    left: -90px;
+    bottom: -70px;
+    opacity: .08;
+  }
+
+  .hero-butterfly {
+    width: 88px;
+    right: 8%;
+    top: 80px;
+    opacity: .18;
+  }
+
+  .impact {
+    text-align: center;
+    padding: 76px 6%;
+  }
+
+  .impact h2,
+  .note h2 {
+    font-size: 46px;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  .small-line {
+    width: 76px;
+    height: 4px;
+    margin: 14px auto 44px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--purple), var(--teal));
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+
+  article {
+    background: white;
+    border-radius: 28px;
+    padding: 40px 28px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    border: 1px solid #edf1f7;
+  }
+
+  article h3 {
+    font-size: 32px;
+    color: var(--navy);
+    margin: 0 0 14px;
+  }
+
+  article p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .donation-box {
+    margin: 20px 6% 74px;
+    padding: 64px;
+    border-radius: 34px;
+    color: white;
+    background:
+      radial-gradient(circle at 86% 35%, rgba(255,255,255,.14), transparent 28%),
+      linear-gradient(135deg, var(--purple), var(--teal));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    box-shadow: 0 24px 54px rgba(8,41,79,.16);
+  }
+
+  .cta-label {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 13px;
+    font-weight: 900;
+    opacity: .9;
+  }
+
+  .donation-box h2 {
+    max-width: 760px;
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+
+  .donation-box p {
+    max-width: 760px;
+    line-height: 1.7;
+  }
+
+  .donation-box a {
+    background: white;
+    color: var(--purple);
+    padding: 17px 36px;
+    border-radius: 999px;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .note {
+    text-align: center;
+    padding: 20px 8% 90px;
+  }
+
+  .note p {
+    max-width: 720px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .donation-box {
+      flex-direction: column;
+      text-align: center;
+      padding: 44px 26px;
+    }
+
+    .hero-leaf,
+    .hero-butterfly {
+      display: none;
+    }
+  }
+</style>
