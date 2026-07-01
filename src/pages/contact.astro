@@ -1,448 +1,196 @@
 
 ---
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-<head>
-  <title>Contact Us | Digestive Harmony</title>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-
-  <meta
-    name="description"
-    content="Contact Digestive Harmony for questions, partnerships, volunteer opportunities or general inquiries."
-  />
-
-  <link rel="icon" type="image/png" href="/favicon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<a href="/">
-<img src="/logo.png" class="logo" alt="Digestive Harmony">
-</a>
-
-<nav>
-
-<a href="/">Home</a>
-
-<a href="/about">About</a>
-
-<a href="/resources">Resources</a>
-
-<a href="/get-involved">Get Involved</a>
-
-<a class="active" href="/contact">Contact</a>
-
-<a class="donate" href="#">Donate</a>
-
-</nav>
-
-</header>
-
-
-<section class="hero">
-
-<h1>Contact Us</h1>
-
-<p>
-
-We'd love to hear from you.
-
-Whether you have a question, would like to volunteer,
-
-partner with us, or simply say hello,
-
-we're here to help.
-
-</p>
-
-</section>
-
-
-<section class="contact-grid">
-
-<div class="card">
-
-<h2>Email</h2>
-
-<p>
-
-General Inquiries
-
-</p>
-
-<p>
-
-<strong>info@digestiveharmony.org</strong>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Volunteer</h2>
-
-<p>
-
-Interested in supporting our mission?
-
-</p>
-
-<p>
-
-<strong>volunteer@digestiveharmony.org</strong>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Partnerships</h2>
-
-<p>
-
-Healthcare organizations,
-
-schools and nonprofits.
-
-</p>
-
-<p>
-
-<strong>partners@digestiveharmony.org</strong>
-
-</p>
-
-</div>
-
-</section>
-
-
-<section class="message">
-
-<h2>Send Us a Message</h2>
-
-<p>
-
-A contact form will be available soon.
-
-Until then, please email us and we'll respond as soon as possible.
-
-</p>
-
-<a href="mailto:info@digestiveharmony.org">
-
-Email Digestive Harmony
-
-</a>
-
-</section>
-
-
-<footer>
-
-<img src="/logo.png" class="footer-logo">
-
-<p>
-
-Advancing Hope for IBD
-
-</p>
-
-<p>
-
-© 2026 Digestive Harmony
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+<Layout
+  title="Contact Us | Digestive Harmony"
+  description="Contact Digestive Harmony for questions, partnerships, volunteer opportunities, or general inquiries."
+  active="contact"
+>
+  <main>
+    <section class="contact-hero">
+      <img class="decor hero-leaf" src="/leaf-pattern.png" alt="" />
+      <img class="decor hero-butterfly" src="/butterfly-icon.png" alt="" />
+
+      <p class="eyebrow">Contact Us</p>
+      <h1>We would love to hear from you.</h1>
+      <p>
+        Whether you have a question, want to volunteer, partner with us, or simply say hello,
+        Digestive Harmony is here to connect.
+      </p>
+    </section>
+
+    <section class="contact-cards">
+      <article>
+        <h2>General Inquiries</h2>
+        <p>Questions about Digestive Harmony, resources, or our mission.</p>
+        <a href="mailto:info@digestiveharmony.org">info@digestiveharmony.org</a>
+      </article>
+
+      <article>
+        <h2>Volunteer</h2>
+        <p>Interested in supporting our work or helping the IBD community?</p>
+        <a href="mailto:volunteer@digestiveharmony.org">volunteer@digestiveharmony.org</a>
+      </article>
+
+      <article>
+        <h2>Partnerships</h2>
+        <p>For schools, healthcare groups, nonprofits, or community partners.</p>
+        <a href="mailto:partners@digestiveharmony.org">partners@digestiveharmony.org</a>
+      </article>
+    </section>
+
+    <section class="contact-cta">
+      <div>
+        <p class="cta-label">Let’s connect</p>
+        <h2>Have a question or idea?</h2>
+        <p>Email us and we’ll respond as soon as possible.</p>
+      </div>
+
+      <a href="mailto:info@digestiveharmony.org">Email Us</a>
+    </section>
+  </main>
+</Layout>
 
 <style>
-
-:root{
-
---purple:#6e42c1;
-
---teal:#0698a8;
-
---navy:#08294f;
-
-}
-
-*{
-
-box-sizing:border-box;
-
-}
-
-body{
-
-margin:0;
-
-font-family:Inter,sans-serif;
-
-color:#223;
-
-background:white;
-
-}
-
-.header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 6%;
-
-box-shadow:0 6px 25px rgba(0,0,0,.05);
-
-background:white;
-
-}
-
-.logo{
-
-width:190px;
-
-}
-
-nav{
-
-display:flex;
-
-gap:28px;
-
-align-items:center;
-
-font-weight:600;
-
-}
-
-nav a{
-
-color:var(--navy);
-
-text-decoration:none;
-
-}
-
-.active{
-
-color:var(--purple);
-
-}
-
-.donate{
-
-padding:12px 24px;
-
-border-radius:999px;
-
-background:linear-gradient(135deg,var(--purple),var(--teal));
-
-color:white;
-
-}
-
-.hero{
-
-padding:90px 10%;
-
-text-align:center;
-
-background:linear-gradient(135deg,#fff,#f9f5ff,#eefcff);
-
-}
-
-.hero h1{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:70px;
-
-margin-bottom:20px;
-
-color:var(--navy);
-
-}
-
-.hero p{
-
-max-width:720px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:1.8;
-
-}
-
-.contact-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-padding:80px 8%;
-
-}
-
-.card{
-
-background:white;
-
-padding:40px;
-
-border-radius:24px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-text-align:center;
-
-}
-
-.card h2{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:34px;
-
-color:var(--navy);
-
-}
-
-.card p{
-
-line-height:1.8;
-
-}
-
-.message{
-
-margin:40px auto 80px;
-
-max-width:900px;
-
-padding:70px;
-
-text-align:center;
-
-border-radius:30px;
-
-background:linear-gradient(135deg,var(--purple),var(--teal));
-
-color:white;
-
-}
-
-.message h2{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:46px;
-
-margin-top:0;
-
-}
-
-.message a{
-
-display:inline-block;
-
-margin-top:25px;
-
-padding:16px 34px;
-
-background:white;
-
-color:var(--purple);
-
-border-radius:999px;
-
-font-weight:700;
-
-text-decoration:none;
-
-}
-
-footer{
-
-padding:60px;
-
-text-align:center;
-
-background:#f7f5ff;
-
-}
-
-.footer-logo{
-
-width:180px;
-
-margin-bottom:15px;
-
-}
-
-@media(max-width:900px){
-
-.header{
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-nav{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.contact-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.hero h1{
-
-font-size:54px;
-
-}
-
-.message{
-
-margin:30px;
-
-padding:40px;
-
-}
-
-}
-
+  .contact-hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 105px 8% 115px;
+    background:
+      radial-gradient(circle at 12% 78%, rgba(110,66,193,.14), transparent 30%),
+      radial-gradient(circle at 88% 20%, rgba(6,152,168,.12), transparent 32%),
+      linear-gradient(135deg, #ffffff, #fbf7ff 45%, #ecfbfc);
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(56px, 7vw, 88px);
+    line-height: .98;
+    color: var(--navy);
+    margin: 14px 0 20px;
+  }
+
+  .contact-hero p:last-child {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .hero-leaf {
+    width: 360px;
+    left: -90px;
+    bottom: -70px;
+    opacity: .08;
+  }
+
+  .hero-butterfly {
+    width: 88px;
+    right: 8%;
+    top: 80px;
+    opacity: .18;
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 80px 6%;
+  }
+
+  .contact-cards article {
+    background: white;
+    border-radius: 28px;
+    padding: 42px 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    border: 1px solid #edf1f7;
+  }
+
+  .contact-cards h2 {
+    font-size: 34px;
+    color: var(--navy);
+    margin: 0 0 14px;
+  }
+
+  .contact-cards p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .contact-cards a {
+    color: var(--teal);
+    font-weight: 800;
+  }
+
+  .contact-cta {
+    position: relative;
+    margin: 20px 6% 80px;
+    padding: 60px;
+    border-radius: 34px;
+    color: white;
+    background:
+      radial-gradient(circle at 86% 35%, rgba(255,255,255,.14), transparent 28%),
+      linear-gradient(135deg, var(--purple), var(--teal));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    box-shadow: 0 24px 54px rgba(8,41,79,.16);
+  }
+
+  .cta-label {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 13px;
+    font-weight: 900;
+    opacity: .9;
+  }
+
+  .contact-cta h2 {
+    font-size: 44px;
+    margin: 0 0 12px;
+  }
+
+  .contact-cta p {
+    line-height: 1.6;
+  }
+
+  .contact-cta a {
+    background: white;
+    color: var(--purple);
+    padding: 17px 36px;
+    border-radius: 999px;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .contact-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-cta {
+      flex-direction: column;
+      text-align: center;
+      padding: 44px 26px;
+    }
+
+    .hero-leaf,
+    .hero-butterfly {
+      display: none;
+    }
+  }
 </style>
+
+
